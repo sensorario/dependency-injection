@@ -2,6 +2,7 @@
     "name": "sensorario/dependency-injection",
     "description": "an automatic dependency injection function",
     "type": "library",
+    "license": "LICENCE",
     "autoload": {
         "files": [
             "src\\functions.php"
