@@ -2,8 +2,9 @@
 
 namespace Sensorario\DependencyInjection;
 
-function buildDeps($instance, $method, $deps = []) {
-    $params = (new \ReflectionMethod($instance, $method))
+function buildDeps($subject, $method, $deps = []) {
+    if (!method_exists($subject, '__construct')) return null;
+    $params = (new \ReflectionMethod($subject, $method))
         ->getParameters();
     foreach ($params as $dep) {
         $className = (string) $dep->getType();
