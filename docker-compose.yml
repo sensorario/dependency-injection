@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  server:
+    build:
+      context: ./docker/server/
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "9999:80"
